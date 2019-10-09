@@ -1,0 +1,14 @@
+
+.vs/cpp-practising/v15/.suo
+*.db
+*.ipch
+*.log
+*.tlog
+*.pch
+*.obj
+*.idb
+*.pdb
+*.user
+*.enc
+*.exe
+*.ilk
