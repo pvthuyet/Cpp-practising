@@ -12,3 +12,6 @@
 *.enc
 *.exe
 *.ilk
+*.opendb
+*.db-shm
+*.db-wal

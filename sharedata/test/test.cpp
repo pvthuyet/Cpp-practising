@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include "../deadlock.h"
+#include "../sharedlock.h"
 
 int main()
 {
@@ -16,6 +17,7 @@ int main()
 		1: fix deadlock by std::lock and std::lock_guard\n\
 		2: fix deadlock by std::lock and std::unique_lock\n\
 		3: fix deadlock by std::scoped_lock\n\
+		4: Test shared mutex\n\
 		q: quit\n\
 		choose: ";
 		std::cin >> s;
@@ -25,8 +27,23 @@ int main()
 		{
 			break;
 		}
+		int v = std::stoi(s);
+		switch (v)
+		{
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+			testDeadlock(v);
+			break;
 
-		testDeadlock(std::stoi(s));
+		case 4:
+			testSharedMutex();
+			break;
+		default:
+			break;
+		}
+		
 	}
 
 	return 0;
